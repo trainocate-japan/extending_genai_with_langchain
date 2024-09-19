@@ -95,7 +95,7 @@ def load_document(file):
         return None
 
 # get_pdf_text から呼び出されて Text splitter (RecursiveCharacterTextSplitter) を実行
-def chunk_data(data, chunk_size=256, chunk_overlap=0):
+def chunk_data(data, chunk_size=1024, chunk_overlap=256):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     chunks = text_splitter.split_documents(data)
     return chunks
@@ -179,7 +179,7 @@ def get_answer_with_history(model, vector_store, query, session_id='unused'):
     )
 
     # Chat prompt
-    system_message = """以下の参考用のテキストの一部を参照して、質問に回答してください。もし参考用のテキストの中に回答に役立つ情報が含まれていなければ、分からない、と答えてください。
+    system_message = """以下の参考用のテキストの一部を参照して、質問に丁寧かつ親切に回答してください。もし参考用のテキストの中に回答に役立つ情報が含まれていなければ、分かりません、と答えてください。
 
     {context}"""
     human_message = "質問：{input}"
