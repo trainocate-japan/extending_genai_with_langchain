@@ -28,11 +28,11 @@
 9. Explorer 部分を右クリックして、[**New File**] をクリックします。
 10. `.env` という名前のファイルを作成します。エディタで編集画面のタブが開くので、以下のように API キーを保存します。(YOUR_KEY の部分には実際の各キーの値を入力してください)
     ファイルは自動保存されます。
-   ```
-   OPENAI_API_KEY="YOUR_KEY"
-   LANGCHAIN_API_KEY="YOUR_KEY"
-   PINECONE_API_KEY="YOUR_KEY"
-   ```
+    ```
+    OPENAI_API_KEY="YOUR_KEY"
+    LANGCHAIN_API_KEY="YOUR_KEY"
+    PINECONE_API_KEY="YOUR_KEY"
+    ```
 
 # Streamlit の概要
 1. `streamlit_demo.py` を使用して講師が Streamlit アプリケーションのデモを行います。
