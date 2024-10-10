@@ -84,8 +84,8 @@ def load_document(file):
         # TASK
         # 以下のパラメータで PyPDFLoader のインスタンスを作成し、ファイルをロードするコードを作成してください
         # file_path=tmp_file_path
-        loader = 
-        data = 
+        loader = PyPDFLoader(file_path=tmp_file_path)
+        data = loader.load()
         return data
     else:
         st.write('Document format is not supported!')
@@ -95,8 +95,8 @@ def load_document(file):
 def chunk_data(data, chunk_size=1024, chunk_overlap=256):
     # TASK
     # RecursiveCharacterTextSplitter のインスタンスを作成して、ファイルのデータをチャンクに分割するコードを作成してください
-    text_splitter = 
-    chunks = 
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+    chunks = text_splitter.split_documents(data)
     return chunks
 
 # Vector store の作成
@@ -113,7 +113,7 @@ def insert_or_fetch_embeddings(index_name, chunks):
     # 以下のパラメータで Embedding model (OpenAIEmbeddings) のインスタンスを作成してください
     # model='text-embedding-3-small'
     # dimensions=1536
-    embeddings = 
+    embeddings = OpenAIEmbeddings(model='text-embedding-3-small', dimensions=1536)
 
     # Create or update the index if it doesn't exist
     if index_name not in pc.list_indexes().names():
