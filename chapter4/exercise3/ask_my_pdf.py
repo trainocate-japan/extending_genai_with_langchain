@@ -6,7 +6,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders.pdf import PyPDFLoader
 from langchain_community.callbacks.manager import get_openai_callback
-from langchain_community.vectorstores.pinecone import Pinecone
+from langchain_pinecone import PineconeVectorStore
 import pinecone
 from pinecone import ServerlessSpec
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -129,10 +129,10 @@ def insert_or_fetch_embeddings(index_name, chunks):
             )
             # CHECK
             # Vector store (Pinecone) のインスタンスを作成
-            vector_store = Pinecone.from_documents(chunks, embeddings, index_name=index_name)
+            vector_store = PineconeVectorStore.from_documents(chunks, embeddings, index_name=index_name)
     else:
         with st.spinner("Updating embeddings ... "):
-            vector_store = Pinecone.from_documents(chunks, embeddings, index_name=index_name)
+            vector_store = PineconeVectorStore.from_documents(chunks, embeddings, index_name=index_name)
     return vector_store
 
 # 既存のインデックスを削除
