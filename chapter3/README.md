@@ -9,5 +9,5 @@
   
   
 # ハンズオンの開始
-1. **langchain_basics.ipynb** をクリックします。
+1. **langchain_basics.ipynb** を右クリックし、[**新しいタブで開く**] をクリックします。
 2. [**Open in Colab**] ボタンをクリックし、Google Colab でノートブックを開きます。
