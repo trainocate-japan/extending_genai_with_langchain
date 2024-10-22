@@ -7,5 +7,5 @@
 5. Chrome のタブは閉じずに開いたままにしておきます。
 
 # ハンズオンの開始
-1. **implement_agents.ipynb** をクリックします。
+1. **implement_agents.ipynb** を右クリックし、[**新しいタブで開く**] をクリックします。
 2. [**Open in Colab**] ボタンをクリックし、Google Colab でノートブックを開きます。
