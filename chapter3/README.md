@@ -4,7 +4,7 @@
 2. Google アカウントでログインします。
 3. 左ナビゲーション下部の [**Settings**] アイコン (歯車のアイコン) をクリックします。
 4. [**Create API Key**] ボタンをクリックします。
-5. [**Personal Access Token**] を選択し、[**Create API Key**] ボタンをクリックします。
+5. [**Personal Access Token**] を選択し、[**Create API Key**] ボタンをクリックします (Description は適当に入力していただいて構いません)。
 6. 生成されたキーをコピーし、メモ帳などにペーストして保存します。
   
   
