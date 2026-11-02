@@ -19,7 +19,7 @@ from operator import itemgetter
 from langchain_core.output_parsers import StrOutputParser
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain_classic.chain import create_history_aware_retriever
+from langchain_classic.chains import create_history_aware_retriever
 from streamlit.runtime.scriptrunner_utils.script_run_context import get_script_run_ctx
 from langsmith import Client
 
