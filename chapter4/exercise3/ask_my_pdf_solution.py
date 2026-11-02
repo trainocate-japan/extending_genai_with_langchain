@@ -4,7 +4,7 @@ import tempfile
 import streamlit as st
 from streamlit_feedback import streamlit_feedback
 from langchain_openai import OpenAIEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders.pdf import PyPDFLoader
 from langchain_community.callbacks.manager import get_openai_callback
 from langchain_core.tracers.context import collect_runs
@@ -19,7 +19,7 @@ from operator import itemgetter
 from langchain_core.output_parsers import StrOutputParser
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain.chains import create_history_aware_retriever
+from langchain_classic.chain import create_history_aware_retriever
 from streamlit.runtime.scriptrunner_utils.script_run_context import get_script_run_ctx
 from langsmith import Client
 
